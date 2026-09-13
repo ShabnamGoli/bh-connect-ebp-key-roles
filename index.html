@@ -1,307 +1,442 @@
-/* ============ Tokens ============ */
-/* Colors sampled directly from the Canva video deck (pixel-sampled from the
-   exported PDF), not estimated. If you tweak the deck's palette later,
-   re-sample and update just these variables -- everything below inherits
-   from them. */
-:root {
-  --white: #FFFFFF;
-  --ink: #1F265B;          /* body / bullet text */
-  --headline: #1D2033;     /* headings */
-  --ink-soft: #4E5384;
-  --line: #E1DEE6;
-
-  --blue-accent: #0B4FA3;  /* "EBP", subtitle text, links, CTAs */
-  --blue-bg: #EAF1FA;      /* light section background */
-
-  --grad-start: #2D6E8D;   /* deck border gradient, teal-blue */
-  --grad-end: #17315A;     /* deck border gradient, deep navy */
-
-  --chip-bg: #FFD93D;      /* role-label chip */
-  --chip-text: #000845;
-
-  --icon-navy: #0C1764;
-
-  --focus-ring: #17315A;
-
-  /* Source page's font stack: Segoe UI first (system font), Noto Sans fallback. */
-  --font-body: "Segoe UI", "Noto Sans", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Key Roles in BH-CONNECT & BHSA EBP Implementation | Microlearning</title> <meta name="description" content="A 3-5 minute microlearning on the four key stakeholder roles in BH-CONNECT and BHSA evidence-based practice implementation."> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <style> :root { --white: #FFFFFF; --ink: #1F265B; --headline: #1D2033; --ink-soft: #4E5384; --line: #E1DEE6;
+--blue-accent: 
+#0B4FA3;
+--blue-bg: 
+#EAF1FA;
+--grad-start: 
+#2D6E8D;
+--grad-end: 
+#17315A;
+--chip-bg: 
+#FFD93D;
+--chip-text: 
+#000845;
+--icon-navy: 
+#0C1764;
+--focus-ring: 
+#17315A;
+--font-body: "Segoe UI", "Noto Sans", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
-
-* { box-sizing: border-box; }
-
+{ box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+html { scroll-behavior: auto; }
+{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
-
 body {
-  margin: 0;
-  background: var(--white);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  font-weight: 400;
-  line-height: 1.6;
+margin: 0;
+background: var(--white);
+color: var(--ink);
+font-family: var(--font-body);
+font-size: 1.05rem;
+font-weight: 400;
+line-height: 1.6;
 }
-
 .wrap {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+max-width: 780px;
+margin: 0 auto;
+padding: 0 1.5rem;
 }
-
 h1, h2, h3 { font-family: var(--font-body); line-height: 1.25; color: var(--headline); }
 h1 { font-size: 2.1rem; font-weight: 800; margin: 0.4rem 0 0.75rem; }
 h2 { font-size: 1.45rem; font-weight: 700; margin: 0 0 0.6rem; }
 h3 { font-size: 1.1rem; font-weight: 700; margin: 0 0 0.4rem; }
 p { margin: 0 0 1rem; max-width: 68ch; }
-
 a { color: var(--blue-accent); }
 a:hover { color: var(--grad-end); }
-
 .skip-link {
-  position: absolute;
-  left: -999px;
-  top: auto;
-  background: var(--grad-end);
-  color: var(--white);
-  padding: 0.75rem 1.25rem;
-  z-index: 100;
-  border-radius: 0 0 6px 0;
-  font-weight: 700;
+position: absolute;
+left: -999px;
+top: auto;
+background: var(--grad-end);
+color: var(--white);
+padding: 0.75rem 1.25rem;
+z-index: 100;
+border-radius: 0 0 6px 0;
+font-weight: 700;
 }
 .skip-link:focus {
-  left: 0;
-  top: 0;
+left: 0;
+top: 0;
 }
-
 :focus-visible {
-  outline: 3px solid var(--focus-ring);
-  outline-offset: 3px;
-  border-radius: 2px;
+outline: 3px solid var(--focus-ring);
+outline-offset: 3px;
+border-radius: 2px;
 }
-
 .fine-print { font-size: 0.85rem; color: var(--ink-soft); }
-
 .site-header {
-  background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
-  color: var(--white);
-  padding: 2.5rem 0 2rem;
+background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+color: var(--white);
+padding: 2.5rem 0 2rem;
 }
 .site-header h1 { color: var(--white); }
 .eyebrow {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  color: #C9DCE8;
-  margin: 0;
+font-family: var(--font-body);
+font-weight: 600;
+font-size: 0.85rem;
+letter-spacing: 0.02em;
+color: 
+#C9DCE8;
+margin: 0;
 }
-.lede { color: #E4EDF4; max-width: 60ch; }
+.lede { color: 
+#E4EDF4; max-width: 60ch; }
 .meta-badge {
-  display: inline-block;
-  border: 1px solid rgba(255,255,255,0.35);
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #F2F6F9;
-  margin: 0;
+display: inline-block;
+border: 1px solid rgba(255,255,255,0.35);
+padding: 0.35rem 0.85rem;
+border-radius: 999px;
+font-size: 0.9rem;
+font-weight: 600;
+color: 
+#F2F6F9;
+margin: 0;
 }
-
 .section {
-  padding: 2.75rem 0;
-  border-bottom: 1px solid var(--line);
+padding: 2.75rem 0;
+border-bottom: 1px solid var(--line);
 }
 .section:last-of-type { border-bottom: none; }
-
 .video-frame {
-  background: #000;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 0.5rem;
+background: #000;
+border-radius: 8px;
+overflow: hidden;
+margin-bottom: 0.5rem;
 }
 .video-frame video { display: block; width: 100%; height: auto; }
-
 .transcript {
-  margin-top: 1rem;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--blue-bg);
-  padding: 0.25rem 1.25rem;
+margin-top: 1rem;
+border: 1px solid var(--line);
+border-radius: 8px;
+background: var(--blue-bg);
+padding: 0.25rem 1.25rem;
 }
 .transcript summary {
-  cursor: pointer;
-  font-weight: 700;
-  padding: 0.85rem 0;
+cursor: pointer;
+font-weight: 700;
+padding: 0.85rem 0;
 }
 .transcript-body p { font-size: 0.95rem; }
-
 .section-flow { background: var(--blue-bg); }
 .flow-diagram {
-  list-style: none;
-  margin: 1.75rem 0 0.5rem;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  gap: 0.5rem 0.35rem;
+list-style: none;
+margin: 1.75rem 0 0.5rem;
+padding: 0;
+display: flex;
+flex-wrap: wrap;
+align-items: stretch;
+gap: 0.5rem 0.35rem;
 }
 .flow-step {
-  flex: 1 1 150px;
-  border-radius: 8px;
-  padding: 1rem 1.1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  border-top: 4px solid var(--grad-end);
-  background: var(--white);
+flex: 1 1 150px;
+border-radius: 8px;
+padding: 1rem 1.1rem;
+display: flex;
+flex-direction: column;
+gap: 0.25rem;
+border-top: 4px solid var(--grad-end);
+background: var(--white);
 }
 .flow-label { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; color: var(--headline); }
 .flow-role { font-size: 0.9rem; font-weight: 400; color: var(--ink-soft); }
 .flow-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  color: var(--ink-soft);
-  padding: 0 0.15rem;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.4rem;
+color: var(--ink-soft);
+padding: 0 0.15rem;
 }
-
 @media (max-width: 640px) {
-  .flow-diagram { flex-direction: column; }
-  .flow-arrow { transform: rotate(90deg); padding: 0.1rem 0; }
+.flow-diagram { flex-direction: column; }
+.flow-arrow { transform: rotate(90deg); padding: 0.1rem 0; }
 }
-
 .role-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-top: 1.5rem;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+margin-top: 1.5rem;
 }
 @media (max-width: 640px) {
-  .role-grid { grid-template-columns: 1fr; }
+.role-grid { grid-template-columns: 1fr; }
 }
 .role-card {
-  background: var(--white);
-  border: 1px solid var(--line);
-  padding: 1.25rem 1.4rem;
-  border-radius: 4px;
+background: var(--white);
+border: 1px solid var(--line);
+padding: 1.25rem 1.4rem;
+border-radius: 4px;
 }
 .role-card h3 {
-  display: inline-block;
-  font-weight: 700;
-  background: var(--chip-bg);
-  color: var(--chip-text);
-  padding: 0.3rem 0.75rem;
-  border-radius: 4px;
-  font-size: 1.05rem;
+display: inline-block;
+font-weight: 700;
+background: var(--chip-bg);
+color: var(--chip-text);
+padding: 0.3rem 0.75rem;
+border-radius: 4px;
+font-size: 1.05rem;
 }
 .role-card p { font-size: 0.95rem; margin-bottom: 0; margin-top: 0.75rem; }
-
 .accordion-group { margin-top: 1.5rem; }
 .accordion-item {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  margin-bottom: 0.75rem;
-  background: var(--white);
-  overflow: hidden;
+border: 1px solid var(--line);
+border-radius: 8px;
+margin-bottom: 0.75rem;
+background: var(--white);
+overflow: hidden;
 }
 .accordion-item summary {
-  cursor: pointer;
-  list-style: none;
-  padding: 1.1rem 1.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--headline);
+cursor: pointer;
+list-style: none;
+padding: 1.1rem 1.4rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-family: var(--font-body);
+font-weight: 700;
+font-size: 1.05rem;
+color: var(--headline);
 }
 .accordion-item summary::-webkit-details-marker { display: none; }
 .accordion-icon {
-  width: 0.7rem;
-  height: 0.7rem;
-  border-right: 2px solid var(--grad-end);
-  border-bottom: 2px solid var(--grad-end);
-  transform: rotate(45deg);
-  transition: transform 0.15s ease;
-  flex-shrink: 0;
-  margin-left: 1rem;
+width: 0.7rem;
+height: 0.7rem;
+border-right: 2px solid var(--grad-end);
+border-bottom: 2px solid var(--grad-end);
+transform: rotate(45deg);
+transition: transform 0.15s ease;
+flex-shrink: 0;
+margin-left: 1rem;
 }
 .accordion-item[open] .accordion-icon { transform: rotate(225deg); margin-top: 0.35rem; }
-
 .accordion-content {
-  padding: 0 1.4rem 1.4rem;
-  border-top: 1px solid var(--line);
+padding: 0 1.4rem 1.4rem;
+border-top: 1px solid var(--line);
 }
 .role-breakdown { margin: 1rem 0 0; display: grid; gap: 0.85rem; }
 .role-breakdown > div { display: grid; grid-template-columns: 150px 1fr; gap: 0.75rem; align-items: baseline; }
 @media (max-width: 560px) {
-  .role-breakdown > div { grid-template-columns: 1fr; gap: 0.25rem; }
+.role-breakdown > div { grid-template-columns: 1fr; gap: 0.25rem; }
 }
 .role-breakdown dt { margin: 0; }
 .role-breakdown dd { margin: 0; font-size: 0.95rem; font-weight: 400; }
-
 .tag {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.82rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  background: var(--chip-bg);
-  color: var(--chip-text);
+display: inline-block;
+font-family: var(--font-body);
+font-weight: 600;
+font-size: 0.82rem;
+padding: 0.2rem 0.6rem;
+border-radius: 4px;
+background: var(--chip-bg);
+color: var(--chip-text);
 }
-
 .section-check { background: var(--blue-bg); }
 fieldset { border: none; padding: 0; margin: 1.5rem 0 0; }
 legend {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--headline);
-  padding: 0;
-  margin-bottom: 1rem;
-  max-width: 62ch;
+font-family: var(--font-body);
+font-weight: 700;
+font-size: 1.1rem;
+color: var(--headline);
+padding: 0;
+margin-bottom: 1rem;
+max-width: 62ch;
 }
 .option {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.65rem;
-  padding: 0.65rem 0;
-  border-bottom: 1px solid var(--line);
+display: flex;
+align-items: flex-start;
+gap: 0.65rem;
+padding: 0.65rem 0;
+border-bottom: 1px solid var(--line);
 }
 .option input[type="radio"] { width: 1.15rem; height: 1.15rem; margin-top: 0.15rem; flex-shrink: 0; }
 .option label { cursor: pointer; font-weight: 600; }
-
 .btn-check {
-  margin-top: 1.5rem;
-  background: var(--grad-end);
-  color: var(--white);
-  border: none;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 0.8rem 1.6rem;
-  border-radius: 6px;
-  cursor: pointer;
+margin-top: 1.5rem;
+background: var(--grad-end);
+color: var(--white);
+border: none;
+font-family: var(--font-body);
+font-weight: 700;
+font-size: 1rem;
+padding: 0.8rem 1.6rem;
+border-radius: 6px;
+cursor: pointer;
 }
 .btn-check:hover { background: var(--blue-accent); }
-
 .feedback {
-  margin-top: 1.25rem;
-  padding: 1rem 1.25rem;
-  border-radius: 8px;
-  font-size: 0.98rem;
-  font-weight: 400;
-  border: 1px solid transparent;
+margin-top: 1.25rem;
+padding: 1rem 1.25rem;
+border-radius: 8px;
+font-size: 0.98rem;
+font-weight: 400;
+border: 1px solid transparent;
 }
-.feedback.correct { background: #E1F0EA; border-color: #2E8B67; color: var(--ink); }
-.feedback.incorrect { background: var(--chip-bg); border-color: #C79A00; color: var(--chip-text); }
-.feedback.empty { background: #FBF0DC; border-color: #C79A3E; color: var(--ink); }
-
+.feedback.correct { background: 
+#E1F0EA; border-color: 
+#2E8B67; color: var(--ink); }
+.feedback.incorrect { background: var(--chip-bg); border-color: 
+#C79A00; color: var(--chip-text); }
+.feedback.empty { background: 
+#FBF0DC; border-color: 
+#C79A3E; color: var(--ink); }
 .site-footer { padding: 2rem 0 3rem; }
 .site-footer p { font-size: 0.85rem; color: var(--ink-soft); max-width: 70ch; }
+</style>
+</head> <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"> <div class="wrap"> <p class="eyebrow">BH-CONNECT &amp; BHSA &middot; EBP Requirements</p> <h1>Key Roles in EBP Implementation</h1> <p class="lede">Four groups share the work of bringing evidence-based practices to Californians with behavioral health needs. This microlearning helps you tell them apart &mdash; and know who to go to.</p> <p class="meta-badge"><span aria-hidden="true">&#9201;</span> About 4 minutes &middot; 3 learning objectives</p> </div> </header> <main id="main-content"> <section class="section" aria-labelledby="video-heading"> <div class="wrap"> <h2 id="video-heading">Start here: the overview</h2> <p>This short video introduces why these roles exist and who's involved. Captions are on by default; a full transcript is provided below the player.</p>
+  <div class="video-frame">
+    <video
+      id="intro-video"
+      controls
+      preload="metadata"
+      poster="assets/video-poster.svg"
+      aria-describedby="video-caption-note">
+      <source src="assets/intro-video.mp4" type="video/mp4">
+      <track kind="captions" src="assets/intro-video.vtt" srclang="en" label="English captions" default>
+      Your browser does not support embedded video. Use the transcript below or the
+      <a href="assets/intro-video.mp4">direct video link</a>.
+    </video>
+  </div>
+  <p id="video-caption-note" class="fine-print">
+    Replace <code>assets/intro-video.mp4</code> with your exported Canva video and
+    <code>assets/intro-video.vtt</code> with its caption file.
+  </p>
+
+  <details class="transcript">
+    <summary>Read the video transcript</summary>
+    <div class="transcript-body">
+      <p><strong>[Slide 1 &mdash; Title]</strong><br>
+      "Key Stakeholder Roles in EBP Implementation. BH-CONNECT and BHSA Requirements. A 4-minute microlearning."</p>
+      <p><strong>[Slide 2 &mdash; EBP defined]</strong><br>
+      "EBP: Evidence-Based Practice. Implementing EBPs involves four key stakeholder groups. Each group has different responsibilities for supporting implementation, meeting requirements, and delivering services."</p>
+      <p><strong>[Slide 3 &mdash; Four Stakeholder Groups]</strong><br>
+      "Behavioral Health Practitioners deliver EBPs. Counties ensure requirements are met. Centers of Excellence &mdash; or COEs &mdash; provide training, technical assistance, and fidelity monitoring. And DHCS establishes requirements and oversees compliance."</p>
+      <p><strong>[Slide 4 &mdash; The Core Relationship]</strong><br>
+      "These four roles form a chain. DHCS sets requirements. COEs deliver training, technical assistance, and fidelity support. Counties ensure their practitioners meet those requirements. And practitioners complete the requirements and deliver care."</p>
+      <p><strong>[Slide 5 &mdash; Transition]</strong><br>
+      "Explore stakeholder roles: continue to the interactive activity to examine each stakeholder's responsibilities in greater detail."</p>
+    </div>
+  </details>
+</div>
+</section> <section class="section section-flow" aria-labelledby="flow-heading"> <div class="wrap"> <h2 id="flow-heading">The core relationship, in one line</h2> <p>The four groups aren't independent &mdash; they form a chain. Every process in the source guidance, from training to fidelity monitoring to payment, follows this same line of responsibility:</p>
+  <ol class="flow-diagram" aria-label="Chain of responsibility from DHCS to practitioners">
+    <li class="flow-step flow-dhcs">
+      <span class="flow-label">DHCS</span>
+      <span class="flow-role">sets requirements</span>
+    </li>
+    <li class="flow-arrow" aria-hidden="true">&rarr;</li>
+    <li class="flow-step flow-coe">
+      <span class="flow-label">COEs</span>
+      <span class="flow-role">deliver training, TA &amp; fidelity support</span>
+    </li>
+    <li class="flow-arrow" aria-hidden="true">&rarr;</li>
+    <li class="flow-step flow-county">
+      <span class="flow-label">Counties</span>
+      <span class="flow-role">ensure compliance</span>
+    </li>
+    <li class="flow-arrow" aria-hidden="true">&rarr;</li>
+    <li class="flow-step flow-practitioner">
+      <span class="flow-label">Practitioners</span>
+      <span class="flow-role">complete requirements &amp; deliver care</span>
+    </li>
+  </ol>
+</div>
+</section> <section class="section" aria-labelledby="roles-heading"> <div class="wrap"> <h2 id="roles-heading">The four roles</h2> <p>Objective 1: by the end of this section, you'll be able to identify each role and its primary function.</p>
+  <div class="role-grid">
+    <article class="role-card role-practitioner">
+      <h3>Behavioral Health Practitioners</h3>
+      <p>Contract with counties to deliver specified EBPs. Complete required training and fidelity assessments. Deliver services consistent with evidence-based standards.</p>
+    </article>
+    <article class="role-card role-county">
+      <h3>Counties</h3>
+      <p>Contract with practitioners to deliver EBPs. Ensure practitioners complete training, fidelity, and data requirements. Report to DHCS.</p>
+    </article>
+    <article class="role-card role-coe">
+      <h3>Centers of Excellence (COEs)</h3>
+      <p>Develop and deliver required training and technical assistance. Conduct fidelity assessments. Track status and send reports to practitioners, counties, and DHCS.</p>
+    </article>
+    <article class="role-card role-dhcs">
+      <h3>DHCS</h3>
+      <p>Establishes EBP requirements and operational guidance. Oversees COEs and county compliance statewide. Answers policy and payment questions.</p>
+    </article>
+  </div>
+</div>
+</section> <section class="section" aria-labelledby="action-heading"> <div class="wrap"> <h2 id="action-heading">See it in action</h2> <p>Objective 2: expand each process area below and compare what each role owns. Notice how the same DHCS &rarr; COE &rarr; County &rarr; Practitioner chain repeats every time.</p>
+  <div class="accordion-group">
+
+    <details class="accordion-item">
+      <summary>
+        <span class="accordion-title">Training</span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </summary>
+      <div class="accordion-content">
+        <dl class="role-breakdown">
+          <div><dt class="tag">Practitioners</dt><dd>Complete required trainings (foundational, role-based, ongoing).</dd></div>
+          <div><dt class="tag">Counties</dt><dd>Ensure practitioners complete required trainings; review training reports.</dd></div>
+          <div><dt class="tag">COEs</dt><dd>Develop and deliver required trainings; track completion; send reports.</dd></div>
+          <div><dt class="tag">DHCS</dt><dd>Sets training requirements; oversees COEs and county compliance.</dd></div>
+        </dl>
+      </div>
+    </details>
+
+    <details class="accordion-item">
+      <summary>
+        <span class="accordion-title">Fidelity Monitoring</span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </summary>
+      <div class="accordion-content">
+        <dl class="role-breakdown">
+          <div><dt class="tag">Practitioners</dt><dd>Complete required fidelity assessments on schedule; review fidelity reports.</dd></div>
+          <div><dt class="tag">Counties</dt><dd>Ensure practitioners meet fidelity timelines; review fidelity reports.</dd></div>
+          <div><dt class="tag">COEs</dt><dd>Conduct fidelity assessments; coordinate scheduling; send reports.</dd></div>
+          <div><dt class="tag">DHCS</dt><dd>Sets fidelity requirements; reviews fidelity data statewide.</dd></div>
+        </dl>
+      </div>
+    </details>
+
+    <details class="accordion-item">
+      <summary>
+        <span class="accordion-title">Service Delivery</span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </summary>
+      <div class="accordion-content">
+        <dl class="role-breakdown">
+          <div><dt class="tag">Practitioners</dt><dd>Identify and enroll eligible individuals; deliver EBPs to standard.</dd></div>
+          <div><dt class="tag">Counties</dt><dd>Ensure practitioners deliver services consistent with DHCS requirements.</dd></div>
+          <div><dt class="tag">COEs</dt><dd>Support practitioners and counties in establishing quality service delivery.</dd></div>
+          <div><dt class="tag">DHCS</dt><dd>Sets operational guidance; oversees statewide compliance.</dd></div>
+        </dl>
+      </div>
+    </details>
+
+  </div>
+</div>
+</section> <section class="section section-check" aria-labelledby="check-heading"> <div class="wrap"> <h2 id="check-heading">Check your understanding</h2> <p>Objective 3: read the scenario and choose who the team should contact.</p>
+  <form id="scenario-form" novalidate>
+    <fieldset>
+      <legend>
+        A county-contracted ACT team just finished onboarding and now needs to schedule its baseline fidelity assessment. Who should the team coordinate with?
+      </legend>
+
+      <div class="option">
+        <input type="radio" id="opt-a" name="scenario" value="dhcs">
+        <label for="opt-a">DHCS</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="opt-b" name="scenario" value="coe">
+        <label for="opt-b">Their Center of Excellence (COE)</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="opt-c" name="scenario" value="county">
+        <label for="opt-c">The county's contracting office</label>
+      </div>
+
+      <button type="submit" class="btn-check">Check answer</button>
+    </fieldset>
+  </form>
+
+  <div id="scenario-feedback" class="feedback" role="alert" aria-live="polite" hidden></div>
+</div>
+</section> <footer class="site-footer"> <div class="wrap"> <p>Source: DHCS Behavioral Health Centers of Excellence Resource Hub &mdash; <a href="https://bhcoe.dhcs.ca.gov/resources/bh-connect-bhsa-ebp-requirements-key-roles/">BH-CONNECT and BHSA EBP Requirements: Key Roles</a>. For the full detail on every process area and all nine EBPs, see the companion reference job aid.</p> </div> </footer> </main> <script> (function () { "use strict"; var form = document.getElementById("scenario-form"); var feedback = document.getElementById("scenario-feedback"); if (!form || !feedback) return; var messages = { dhcs: "Not quite. DHCS sets statewide requirements and oversees compliance, but it doesn't schedule individual fidelity assessments. That coordination happens at the COE level.", coe: "Correct. COEs conduct fidelity assessments and coordinate scheduling directly with practitioner teams, on the required timelines.", county: "Not quite. Counties ensure their contracted practitioners meet fidelity timelines, but the assessment itself is scheduled and conducted by the COE.", }; form.addEventListener("submit", function (event) { event.preventDefault(); var selected = form.querySelector('input[name="scenario"]:checked'); feedback.hidden = false; feedback.classList.remove("correct", "incorrect", "empty"); if (!selected) { feedback.classList.add("empty"); feedback.textContent = "Choose an option before checking your answer."; return; } var value = selected.value; feedback.classList.add(value === "coe" ? "correct" : "incorrect"); feedback.textContent = messages[value]; }); })(); </script> </body> </html>
+
