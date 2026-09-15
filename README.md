@@ -10,7 +10,7 @@
 
 ### Project Overview
 
-This work sample was developed in response to a request for a 3–5 minute accessible microlearning based on the California Department of Health Care Services (DHCS) resource, *BH-CONNECT and BHSA EBP Requirements: Key Roles*.
+This work sample was developed in response to a request for a 5 minute accessible microlearning based on the California Department of Health Care Services (DHCS) resource, *BH-CONNECT and BHSA EBP Requirements: Key Roles*.
 The source material describes how four stakeholder groups—behavioral health practitioners, counties, Centers of Excellence (COEs), and DHCS—share responsibility for implementing evidence-based practices.
 The primary design challenge was to transform dense, policy-oriented content into a short learning experience that helps learners quickly understand who does what, how responsibilities differ, and whom to involve when an implementation need arises.
 The final solution is a browser-based microlearning combining video, visual comparison, expandable role-based content, a glossary, and an application-based knowledge check.
