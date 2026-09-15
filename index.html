@@ -616,7 +616,7 @@ legend { font-weight: 700; font-size: 1.1rem; color: var(--headline); padding: 0
 
 <div class="player-nav js-only">
   <button type="button" id="btn-back" class="btn-nav" disabled>Back</button>
-  <button type="button" id="btn-next" class="btn-nav btn-nav-primary">Next</button>
+  <button type="button" id="btn-next" class="btn-nav btn-nav-primary">Continue</button>
 </div>
 
 <footer class="site-footer">
@@ -743,10 +743,10 @@ legend { font-weight: 700; font-size: 1.1rem; color: var(--headline); padding: 0
       } else {
         btnNext.disabled = false;
         btnNext.textContent =
-  index === screens.length - 1 ? "Restart" :
-  index === 3 ? "Continue to completion" :
-  index === 0 ? "Continue" :
-  "Next";
+          index === screens.length - 1 ? "Restart" :
+          index === 3 ? "Continue to completion" :
+          index === 0 ? "Continue" :
+          "Next";
       }
     }
     current = index;
